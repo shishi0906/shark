@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Shark Tracking</title>
+
+      <link href='https://fonts.googleapis.com/css?family=Alegreya+SC' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Lato|Oxygen|Muli:300|Sintony' rel='stylesheet' type='text/css'>
+
+        <link href="style/style-map.css" rel="stylesheet" type="text/css">
+
+
+    	<style>
+    	</style>
+    </head>
+
+    <body>
+       <div id="container-main">
+            <div class="content-main">
+                <!-- <button id="button2">Click for a smooth animation.</button> -->
+                <button id="button1">Habitate Area</button>
+                <button id="button2">Longline Fishing Area</button>
+                <button id="button3">Overlap Area</button>
+                <div id="mapL" >
+                  <img class="mapimgL" id="mapimg4" src="image/map-04.png"/>
+                  <img class="mapimgL" id="mapimg1" src="image/map-01.png"/>
+                  <img class="mapimgL" id="mapimg2" src="image/map-02.png"/>
+                  <img class="mapimgL" id="mapimg3" src="image/map-03.png"/>
+                </div>
+                <div id="label">
+                  <img class="labelimg" id="maplabel1" src="image/label1.png"/><img class="labelimg" id="maplabel2" src="image/label2.png"/><img class="labelimg" id="maplabel3" src="image/label3.png"/>
+                </div>
+                <!-- <div class="mapS"><img class="mapimgS" id="mapimg1" src="image/map1mobile.png"/><img class="mapimgS" id="mapimg2" src="image/map2mobile.png"/><img class="mapimgS" id="mapimg3" src="image/map3mobile.png"/></div> -->
+            </div>
+            <div class="control-main">
+                <div class="arrow-left"><a href="linda.html"><img src="image/arrow-left1.png" alt="leftArrow"  width="100%"></a></div>
+                <div class="title-main"><h2 class="title-content">Conclusion</h2></div>
+                <div class="arrow-right"><a href="credit.html"><img src="image/arrow-right1.png" alt="rightArrow"  width="100%"></a></div>
+                <div class="intro"><p class="intro-content">The study revealed that the tracked commercial fishing vessels target shark hotspots, areas where sharks tend to congregate, in the North Atlantic. These hots spots were ocean fronts characterized by warm water temperature and high productivity, including the Gulf Stream and the North Atlantic Current/Labrador Current Convergence Zone near Newfoundland. </br>This map reveals areas of high and low use by all the tracked sharks.Approximately 80% of the tracked ranges of blue and mako sharks overlapped with longliners in international waters where they are not protected. Because current hotspots of shark activity are at particularly high risk of overfishing, the introduction of conservation measures such as catch quotas, size limits or marine protected areas will be necessary to protect oceanic sharks from overfishing in their hotspots 
+</p></div>
+            </div>
+       </div>
+
+    </body>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script>
+            d3.select("img#mapimg4").style("display", "inline");
+
+            d3.select("#button1")
+              .on("click", function(d,i){
+                  d3.selectAll("button").classed("selected", false);
+                  d3.select(this).classed("selected", true)
+                  d3.selectAll("img.mapimgL").style("display", "none");
+                  d3.selectAll("img.labelimg").style("display", "none");
+                  d3.select("img#mapimg1").style("display", "inline");
+                  d3.select("img#maplabel1").style("display", "inline");
+              });
+
+            d3.select("#button2")
+              .on("click", function(d,i){
+                  d3.selectAll("button").classed("selected", false);
+                  d3.select(this).classed("selected", true)
+                  d3.selectAll("img.mapimgL").style("display", "none");
+                  d3.selectAll("img.labelimg").style("display", "none");
+                  d3.select("img#mapimg2").style("display", "inline");
+                  d3.select("img#maplabel2").style("display", "inline");     
+              });
+
+            d3.select("#button3")
+              .on("click", function(d,i){
+                  d3.selectAll("button").classed("selected", false);
+                  d3.select(this).classed("selected", true)
+                  d3.selectAll("img.mapimgL").style("display", "none");
+                  d3.selectAll("img.labelimg").style("display", "none");
+                  d3.select("img#mapimg3").style("display", "inline"); 
+                  d3.select("img#maplabel3").style("display", "inline");
+              });
+
+        </script>
+
+</html>
+        
